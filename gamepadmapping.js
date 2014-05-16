@@ -167,6 +167,8 @@
     for (var i = 0; i < newpad.buttons.length; i++) {
       newpad.buttons[i] = new button();
     }
+    // Cache it so we don't have to create a new object every time.
+    usedPads[pad.index] = newpad;
     return newpad;
   }
 
